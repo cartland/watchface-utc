@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Copyright 2014 Chris Cartland. All Rights Reserved.
 
@@ -14,4 +13,10 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<wallpaper xmlns:android="http://schemas.android.com/apk/res/android" />
+
+<resources>
+
+    <!-- Activity themes -->
+    <style name="Theme.Base" parent="android:Theme.Holo.Light" />
+
+</resources>

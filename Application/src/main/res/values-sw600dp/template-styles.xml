@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Copyright 2014 Chris Cartland. All Rights Reserved.
 
@@ -14,4 +13,13 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<wallpaper xmlns:android="http://schemas.android.com/apk/res/android" />
+
+<resources>
+
+    <style name="Widget.SampleMessage">
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:shadowDy">-6.5</item>
+    </style>
+
+</resources>

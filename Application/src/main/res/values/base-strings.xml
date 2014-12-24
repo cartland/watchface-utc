@@ -14,4 +14,18 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<wallpaper xmlns:android="http://schemas.android.com/apk/res/android" />
+<resources>
+    <string name="app_name">WatchFace</string>
+    <string name="intro_message">
+        <![CDATA[
+        
+            
+This sample demonstrates how to create watch faces for android wear and includes a phone app
+and a wearable app. The wearable app has a variety of watch faces including analog, digital,
+opengl, calendar, etc. It also includes a watch-side configuration example. The phone app
+includes a phone-side configuration example.
+            
+        
+        ]]>
+    </string>
+</resources>
