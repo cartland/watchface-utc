@@ -36,12 +36,27 @@ android {
 
     buildToolsVersion "21.1.1"
 
-    defaultConfig {
-        applicationId "com.chriscartland.watchface"
-        minSdkVersion 18
-        targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+
+        versionProps.load(new FileInputStream(versionPropsFile))
+
+        def code = versionProps['VERSION_CODE'].toInteger()
+
+        versionProps['VERSION_CODE']=code.toString()
+        versionProps.store(versionPropsFile.newWriter(), null)
+
+        defaultConfig {
+            applicationId "com.chriscartland.watchface"
+            minSdkVersion 18
+            targetSdkVersion 21
+            versionCode code
+            versionName "1.0"
+        }
+    } else {
+        throw new GradleException("Could not read version.properties!")
     }
 
     sourceSets {
@@ -69,8 +84,31 @@ android {
             }
         }
     }
-
 }
+
+task('increaseVersionCode') << {
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+
+        versionProps.load(new FileInputStream(versionPropsFile))
+
+        def code = versionProps['VERSION_CODE'].toInteger() + 1
+
+        versionProps['VERSION_CODE']=code.toString()
+        versionProps.store(versionPropsFile.newWriter(), null)
+    } else {
+        throw new GradleException("Could not read version.properties!")
+    }
+}
+
+tasks.whenTaskAdded { task ->
+//    if (task.name == 'generateProdReleaseBuildConfig') {
+    task.dependsOn 'increaseVersionCode'
+//    }
+}
+
 
 
 
