@@ -24,8 +24,8 @@
     <dimen name="utc_minute_text_size_round">40dp</dimen>
     <dimen name="utc_hour_text_size">12dp</dimen>
     <dimen name="utc_hour_text_size_round">35dp</dimen>
-    <dimen name="utc_big_hour_text_size">30dp</dimen>
-    <dimen name="utc_big_hour_text_size_round">15dp</dimen>
+    <dimen name="utc_big_hour_text_size">24dp</dimen>
+    <dimen name="utc_big_hour_text_size_round">35dp</dimen>
     <dimen name="digital_am_pm_size">25dp</dimen>
     <dimen name="digital_am_pm_size_round">30dp</dimen>
     <dimen name="digital_x_offset">15dp</dimen>
