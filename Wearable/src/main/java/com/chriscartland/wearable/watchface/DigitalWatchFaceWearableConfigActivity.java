@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.wearable.watchface;
+package com.chriscartland.wearable.watchface;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -22,13 +22,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.wearable.view.BoxInsetLayout;
 import android.support.wearable.view.CircledImageView;
 import android.support.wearable.view.WearableListView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;

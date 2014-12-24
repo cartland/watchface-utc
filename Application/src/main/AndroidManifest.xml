@@ -16,7 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.example.android.wearable.watchface" >
+        package="com.chriscartland.android.wearable.watchface" >
 
     <uses-sdk android:minSdkVersion="18"
               android:targetSdkVersion="21" />

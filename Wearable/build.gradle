@@ -1,25 +1,3 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
-    }
-}
-
-apply plugin: 'com.android.application'
-
-
-
-dependencies {
-
-
-    compile 'com.google.android.gms:play-services-wearable:6.5.+'
-    compile 'com.android.support:support-v13:21.0.+'
-    compile 'com.google.android.support:wearable:1.1.+'
-}
-
 /*
  * Copyright 2014 Chris Cartland. All Rights Reserved.
  *
@@ -36,6 +14,15 @@ dependencies {
  * limitations under the License.
  */
 
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile 'com.google.android.gms:play-services-wearable:6.5.+'
+    compile 'com.android.support:support-v13:21.0.+'
+    compile 'com.google.android.support:wearable:1.1.+'
+}
+
+
 // The sample build uses multiple directories to
 // keep boilerplate and common code separate from
 // the main sample code.
@@ -50,6 +37,7 @@ android {
     buildToolsVersion "21.1.1"
 
     defaultConfig {
+        applicationId "com.chriscartland.watchface"
         versionCode 1
         versionName "1.0"
     }
@@ -60,6 +48,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt')
         }
     }
+
     sourceSets {
         main {
             dirs.each { dir ->
@@ -69,8 +58,8 @@ android {
         }
         androidTest.setRoot('tests')
         androidTest.java.srcDirs = ['tests/src']
-
     }
+
 }
 
 
