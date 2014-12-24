@@ -104,9 +104,9 @@ task('increaseVersionCode') << {
 }
 
 tasks.whenTaskAdded { task ->
-//    if (task.name == 'generateProdReleaseBuildConfig') {
-    task.dependsOn 'increaseVersionCode'
-//    }
+    if (task.name == 'generateReleaseBuildConfig') {
+        task.dependsOn 'increaseVersionCode'
+    }
 }
 
 
