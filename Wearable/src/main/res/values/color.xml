@@ -28,6 +28,6 @@
     <color name="current_hour">#FFFF0000</color>
     <color name="gmt_hour">#FFFFFFFF</color>
     <color name="hand_color">#FFFF0000</color>
-    <color name="utc_label">#FF666666</color>
+    <color name="utc_label">#FF888888</color>
     <color name="utc_hour">#FFFFFFFF</color>
 </resources>
