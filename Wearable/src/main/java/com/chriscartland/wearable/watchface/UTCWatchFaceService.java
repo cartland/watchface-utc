@@ -140,18 +140,16 @@ public class UTCWatchFaceService extends CanvasWatchFaceService {
             mHourPaint.setTextAlign(Paint.Align.CENTER);
 
             mHandPaint = new Paint();
-            mHandPaint.setColor(resources.getColor(R.color.hand_color));
-            mHandPaint.setStrokeWidth(3.f);
-            mHandPaint.setAntiAlias(true);
             mHandPaint.setStyle(Paint.Style.STROKE);
             mHandPaint.setStrokeCap(Paint.Cap.ROUND);
+            mHandPaint.setColor(resources.getColor(R.color.hand_color));
+            mHandPaint.setStrokeWidth(4.f);
 
             mUTCLabelPaint = createTextPaint(resources.getColor(R.color.utc_label));
 
             mCurrentHourPaint = new Paint();
             mCurrentHourPaint.setColor(resources.getColor(R.color.current_hour));
             mCurrentHourPaint.setStrokeWidth(3f);
-            mCurrentHourPaint.setAntiAlias(true);
             mCurrentHourPaint.setStyle(Paint.Style.STROKE);
             mCurrentHourPaint.setStrokeCap(Paint.Cap.ROUND);
 
@@ -254,7 +252,8 @@ public class UTCWatchFaceService extends CanvasWatchFaceService {
             drawMinuteLine(canvas, mTime.minute, mCurrentHourPaint, radius, centerX, centerY,
                     mHourPaint);
 
-            drawHourLine(canvas, mTime.hour, mHandPaint, radius, centerX, centerY,
+            float hourFloat = (float) mTime.hour + (float) mTime.minute / 60f;
+            drawHourLine(canvas, hourFloat, mHandPaint, radius, centerX, centerY,
                     mHourPaint);
 
             // Calculate GMT hour.
