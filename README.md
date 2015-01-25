@@ -1,5 +1,5 @@
-Android WatchFace Sample
-===================================
+UTC WatchFace
+=============
 
 This sample demonstrates how to create watch faces for android wear and includes a phone app
 and a wearable app. The wearable app has a variety of watch faces including analog, digital,
@@ -26,15 +26,12 @@ Support
 - Stack Overflow: http://stackoverflow.com/questions/tagged/android
 
 If you've found an error in this sample, please file an issue:
-https://github.com/googlesamples/android-WatchFace
-
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
+https://github.com/cartland/watchface-utc
 
 License
 -------
 
-Copyright 2014 The Android Open Source Project, Inc.
+Copyright 2015 Chris Cartland. All Rights Reserved.
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for

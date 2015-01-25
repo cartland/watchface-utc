@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright 2014 Chris Cartland. All Rights Reserved.
+  Copyright 2015 Chris Cartland. All Rights Reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -44,28 +44,11 @@
             <meta-data
                 android:name="com.google.android.wearable.watchface.preview"
                 android:resource="@drawable/preview_utc" />
-            <meta-data
-                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
-                android:value="com.chriscartland.wearable.watchface.CONFIG_DIGITAL" />
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
                 <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
             </intent-filter>
         </service>
-
-        <!-- All intent-filters for config actions must include the categories
-            com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION
-            and android.intent.category.DEFAULT. -->
-
-        <activity
-            android:name="com.chriscartland.wearable.watchface.DigitalWatchFaceWearableConfigActivity"
-            android:label="@string/digital_config_name">
-            <intent-filter>
-                <action android:name="com.chriscartland.wearable.watchface.CONFIG_DIGITAL" />
-                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
