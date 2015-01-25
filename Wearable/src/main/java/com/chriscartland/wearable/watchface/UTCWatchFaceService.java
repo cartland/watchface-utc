@@ -205,6 +205,15 @@ public class UTCWatchFaceService extends CanvasWatchFaceService {
                 mCurrentHourPaint.setAntiAlias(antiAlias);
                 mUTCLabelPaint.setAntiAlias(antiAlias);
             }
+
+            if (inAmbientMode) {
+                mHandPaint.setColor(getResources().getColor(R.color.white));
+                mCurrentHourPaint.setColor(getResources().getColor(R.color.white));
+            } else {
+                mHandPaint.setColor(getResources().getColor(R.color.hand_color));
+                mCurrentHourPaint.setColor(getResources().getColor(R.color.current_hour));
+            }
+
             invalidate();
 
             // Whether the timer should be running depends on whether we're in ambient mode (as well
