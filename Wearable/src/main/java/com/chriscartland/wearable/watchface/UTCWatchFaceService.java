@@ -287,12 +287,20 @@ public class UTCWatchFaceService extends CanvasWatchFaceService {
                     // Color.
                     if (hour == mTime.hour) {
                         int color = mHourPaint.getColor();
-                        mHourPaint.setColor(getResources().getColor(R.color.current_hour));
+                        if (isInAmbientMode()) {
+                            mHourPaint.setColor(getResources().getColor(R.color.white));
+                        } else {
+                            mHourPaint.setColor(getResources().getColor(R.color.current_hour));
+                        }
                         drawHour(canvas, hour, mHourPaint, hourRadius, centerX, centerY);
                         mHourPaint.setColor(color);
                     } else if (hour == gmtHour) {
                         int color = mHourPaint.getColor();
-                        mHourPaint.setColor(getResources().getColor(R.color.gmt_hour));
+                        if (isInAmbientMode()) {
+                            mHourPaint.setColor(getResources().getColor(R.color.white));
+                        } else {
+                            mHourPaint.setColor(getResources().getColor(R.color.gmt_hour));
+                        }
                         drawHour(canvas, hour, mHourPaint, hourRadius, centerX, centerY);
                         mHourPaint.setColor(color);
                     } else {
